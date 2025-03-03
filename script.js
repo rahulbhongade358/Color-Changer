@@ -16,8 +16,15 @@ console.log(randomColor());
 
 
 function changecolor(){
+    colorstart = setInterval(() => {
+        console.log(randomColor())
+       box.style.backgroundColor=randomColor();
+       document.body.style.backgroundColor=randomColor();
+    }, 1000);
     console.log("color are changing")
 }
 function colorStop(){
+    clearInterval(`${colorstart}`)
     console.log("stopped")
+    colorstart=null
 }
